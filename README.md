@@ -1,10 +1,5 @@
-
-******************************************************************************************************
-*                                                                                                    *
-*                            WechatSDK weixin 微信全接口SDK封装 Java                                 *
-*                                                                                                    *
-*                            QQ 591270247  honey.zhao@aliyun.com                                     *
-******************************************************************************************************   
+#WechatSDK微信全接口SDK封装 Java                                 
+#QQ:591270247  honey.zhao@aliyun.com
 
 ##一、接口说明
 
@@ -30,7 +25,7 @@
 			 * 		state	否	重定向后会带上state参数，开发者可以填写任意参数值
 			 * 		#wechat_redirect	否	直接在微信打开链接，可以不填此参数。做页面302重定向时候，必须带此参数
 			 */
-			 
+
 ###5）br.com.rest.servlet.Gcj02Bd09TransferServlet  国测局GCJ-02坐标体系（谷歌、高德、腾讯），与百度坐标BD-09体系的转换			
 
 ###6) JsonFileServlet 针对用户 获取当前位置信息，没有进行store.js或jquery cookie方式处理，我们采用了json文件方式处理，在微网站端可以如下调用：eg.
@@ -69,7 +64,7 @@
         	        var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
         	        var speed = res.speed; // 速度，以米/每秒计
         	        var accuracy = res.accuracy; // 位置精度
-        	        
+
         	        if(openid !=""){
         	        	$.ajax({
         				    url: 'http://www.XXX.com/WechatSDK/jsonFile?type=write&openid='+openid+'&latitude='+latitude+'&longitude='+longitude+'&speed='+speed+'&accuracy='+accuracy+'',
@@ -77,16 +72,17 @@
         				    success: function(data){}
         				});
         	        }
-        	        
+
         	    },
         	    cancel: function (res) {
         	        alert('用户拒绝授权获取地理位置');
         	    }
         	});
-        	
+
         }
  ####6.2)读取当前微信用户的地理位置
- 		$.ajax({
+
+		$.ajax({
 		    url: 'http://www.XXX.com/WechatSDK/jsonFile?type=read&openid='+openid+'',
 		    dataType: 'json',
 		    success: function(data){
@@ -98,7 +94,5 @@
 ##二、初始化调用servlet:
 com.ifp.wechat.controller.WeChatServlet.java
 
-##三、jsapiticket处理 
+##三、jsapiticket处理
 此外 doc文件夹下的api 是token监听 api部分 可以帮助 大家读懂token监听部分代码的实现 这部分代码其实wechat4j 的部分 只不过把数据存储部分改成 了properties文件 的操作 考虑到 每7000s才去操作一次 不是太频繁所以才这么做的 不足之处请 提建议 上边有联系方式
-
-			 
