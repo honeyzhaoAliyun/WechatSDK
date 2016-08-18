@@ -80,7 +80,7 @@
         	});
 
         }
- ####6.2)读取当前微信用户的地理位置
+####6.2)读取当前微信用户的地理位置
 
 		$.ajax({
 		    url: 'http://www.XXX.com/WechatSDK/jsonFile?type=read&openid='+openid+'',
