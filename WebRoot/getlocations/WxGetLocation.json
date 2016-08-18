@@ -1,0 +1,12 @@
+{
+	"locations":
+	[
+		{
+			"openid"   : "0",
+			"latitude" : "0", 
+			"longitude": "0", 
+			"speed"    : "0",
+			"accuracy" : "0"
+		}
+	]
+}
